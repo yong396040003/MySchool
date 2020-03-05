@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginStart="40dp"
+            android:text="学号"
+            android:textColor="@color/font"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head">
+
+        <RelativeLayout
+            android:id="@+id/selected_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_select"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/selection_topic" />
+
+            <TextView
+                style="@style/my_font"
+                android:text="毕设选题" />
+
+            <ImageView
+                style="@style/my_right"
+                android:background="@mipmap/my_right" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/di"
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:layout_below="@id/selected_topic"
+            android:background="#f2f2f2" />
+
+        <RelativeLayout
+            android:id="@+id/student_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/di"
+            android:background="@drawable/my_select"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/warning" />
+
+            <TextView
+                style="@style/my_font"
+                android:text="学籍预警" />
+
+            <ImageView
+                style="@style/my_right"
+                android:background="@mipmap/my_right" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/di1"
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:layout_below="@id/student_warning"
+            android:background="#f2f2f2" />
+
+        <RelativeLayout
+            android:id="@+id/end_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/di1"
+            android:background="@drawable/my_select"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/score" />
+
+            <TextView
+                style="@style/my_font"
+                android:text="期末成绩" />
+
+            <ImageView
+                style="@style/my_right"
+                android:background="@mipmap/my_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/end_score"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_select"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/setting" />
+
+            <TextView
+                style="@style/my_font"
+                android:text="设置" />
+
+            <ImageView
+                style="@style/my_right"
+                android:background="@mipmap/my_right" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

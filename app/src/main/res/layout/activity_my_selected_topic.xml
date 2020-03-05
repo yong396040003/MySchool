@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_background"
+        android:paddingTop="30dp">
+        <!--顶部标题栏-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:text="毕设选题"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/ktmc_L"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/ktmc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="课题名称" />
+
+            <EditText
+                android:id="@+id/ktmc1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/select_edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zdjs_L"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ktmc_L"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/zdjs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="指导教师" />
+
+            <EditText
+                android:id="@+id/zdjs1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/select_edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_topic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/zdjs_L"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorEditText_true"
+            android:text="查  询"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+    <com.bin.david.form.core.SmartTable
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/query"
+        android:layout_marginTop="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/table_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/page_total"
+            android:hint="1"
+            android:inputType="number"
+            android:singleLine="true"
+            android:imeOptions="actionDone"/>
+
+        <TextView
+            android:id="@+id/page_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/pre"
+            android:text="共32页 35条" />
+
+        <Button
+            android:id="@+id/pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/next"
+            android:text="上一页" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="下一页" />
+    </RelativeLayout>
+
+    <include layout="@layout/common" />
+
+</RelativeLayout>
